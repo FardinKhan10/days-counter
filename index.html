@@ -321,21 +321,330 @@
             }
         }
 
-        /* Extra responsive adjustments */
-        @media (max-width: 480px) {
+        /* Comprehensive responsive design for all screen sizes */
+        
+        /* Extra small devices (phones, 320px and up) */
+        @media (max-width: 374px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 5vw 3vw;
+                border-radius: 15px;
+                width: 95vw;
+                min-height: auto;
+            }
+            
+            .container::before {
+                border-radius: 17px;
+            }
+            
+            .title {
+                font-size: clamp(1.2rem, 5vw, 1.8rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .days-number {
+                font-size: clamp(4rem, 18vw, 8rem);
+                margin-bottom: 0.5rem;
+            }
+            
+            .days-label {
+                font-size: clamp(1rem, 4vw, 1.4rem);
+            }
+            
+            .motivation {
+                font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+                padding: 1rem 1.2rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+        /* Small devices (phones, 375px - 480px) */
+        @media (min-width: 375px) and (max-width: 480px) {
             .container {
                 padding: 6vw 4vw;
                 border-radius: 20px;
+                width: 92vw;
             }
             
             .container::before {
                 border-radius: 22px;
             }
+            
+            .title {
+                font-size: clamp(1.4rem, 4.5vw, 2rem);
+            }
+            
+            .days-number {
+                font-size: clamp(6rem, 19vw, 10rem);
+            }
+            
+            .motivation {
+                font-size: clamp(0.95rem, 3vw, 1.2rem);
+                padding: 1.2rem 1.5rem;
+            }
         }
 
+        /* Medium small devices (large phones, 481px - 767px) */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .container {
+                padding: 7vw 5vw;
+                border-radius: 25px;
+                width: 90vw;
+            }
+            
+            .container::before {
+                border-radius: 27px;
+            }
+            
+            .days-number {
+                font-size: clamp(8rem, 18vw, 12rem);
+            }
+            
+            .motivation {
+                font-size: clamp(1rem, 2.8vw, 1.25rem);
+                padding: 1.5rem 2rem;
+            }
+        }
+
+        /* Medium devices (tablets, 768px - 991px) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .container {
+                padding: 6vw 4vw;
+                border-radius: 28px;
+                width: 85vw;
+                max-width: 650px;
+            }
+            
+            .container::before {
+                border-radius: 30px;
+            }
+            
+            .title {
+                font-size: clamp(2rem, 4vw, 2.8rem);
+                margin-bottom: 2.5rem;
+            }
+            
+            .days-number {
+                font-size: clamp(10rem, 16vw, 14rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .days-label {
+                font-size: clamp(1.5rem, 3vw, 2.2rem);
+            }
+            
+            .motivation {
+                font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+                padding: 1.8rem 2.5rem;
+                margin-top: 2.5rem;
+            }
+            
+            .completed {
+                font-size: clamp(2.5rem, 5vw, 4.5rem);
+            }
+        }
+
+        /* Large devices (desktops, 992px - 1199px) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .container {
+                padding: 4rem 3.5rem;
+                border-radius: 30px;
+                width: 80vw;
+                max-width: 700px;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+            
+            .days-number {
+                font-size: 15rem;
+                margin-bottom: 2rem;
+            }
+            
+            .days-label {
+                font-size: 2rem;
+            }
+            
+            .motivation {
+                font-size: 1.3rem;
+                padding: 2rem 2.5rem;
+                margin-top: 3rem;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px - 1399px) */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .container {
+                padding: 4.5rem 4rem;
+                width: 75vw;
+                max-width: 750px;
+            }
+            
+            .title {
+                font-size: 2.8rem;
+                margin-bottom: 3.5rem;
+            }
+            
+            .days-number {
+                font-size: 16rem;
+            }
+            
+            .motivation {
+                font-size: 1.35rem;
+                padding: 2.2rem 3rem;
+            }
+        }
+
+        /* Ultra large devices (1400px and up) */
         @media (min-width: 1400px) {
+            .container {
+                padding: 5rem 4.5rem;
+                width: 70vw;
+                max-width: 800px;
+            }
+            
+            .title {
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+            
             .days-number {
                 font-size: 18rem;
+            }
+            
+            .days-label {
+                font-size: 2.5rem;
+            }
+            
+            .motivation {
+                font-size: 1.4rem;
+                padding: 2.5rem 3.5rem;
+                margin-top: 4rem;
+            }
+            
+            .completed {
+                font-size: 5rem;
+            }
+        }
+
+        /* Ultra wide screens (1920px and up) */
+        @media (min-width: 1920px) {
+            .container {
+                max-width: 900px;
+                padding: 6rem 5rem;
+            }
+            
+            .days-number {
+                font-size: 20rem;
+            }
+            
+            .motivation {
+                font-size: 1.5rem;
+                padding: 3rem 4rem;
+            }
+        }
+
+        /* Portrait orientation adjustments */
+        @media (orientation: portrait) and (max-height: 667px) {
+            .container {
+                padding: 4vw 3vw;
+            }
+            
+            .title {
+                margin-bottom: 1.5rem;
+            }
+            
+            .days-container {
+                margin: 1.5rem 0;
+            }
+            
+            .motivation {
+                margin-top: 1.5rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (orientation: landscape) and (max-height: 500px) {
+            body {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+            
+            .container {
+                padding: 2rem 2.5rem;
+                width: 85vw;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .days-container {
+                margin: 1rem 0;
+            }
+            
+            .days-number {
+                font-size: 6rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .days-label {
+                font-size: 1.2rem;
+            }
+            
+            .motivation {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .sparkle {
+                width: 3px;
+                height: 3px;
+            }
+            
+            .container {
+                border-width: 0.5px;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .container {
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+            
+            .motivation {
+                background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .orb {
+                animation: none;
+            }
+            
+            .sparkle {
+                animation: none;
             }
         }
     </style>
